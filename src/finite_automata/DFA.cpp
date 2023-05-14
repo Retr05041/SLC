@@ -14,7 +14,7 @@
  * @param givenInitialState The initial state of the DFA.
  * @param givenFinalStates The final states of the DFA.
 */
-DFA::DFA(std::set<std::string> givenStates, Alphabet givenAlphabet, std::string givenTransitionFunction, std::string givenInitialState, std::set<std::string> givenFinalStates) : states(givenStates), alphabet(givenAlphabet), transitionFunction(givenTransitionFunction), initialState(givenInitialState), finalStates(givenFinalStates) {
+DFA::DFA(std::string givenStates, Alphabet givenAlphabet, std::string givenTransitionFunction, std::string givenInitialState, std::set<std::string> givenFinalStates) : stateString(givenStates), alphabet(givenAlphabet), transitionFunction(givenTransitionFunction), initialState(givenInitialState), finalStates(givenFinalStates) {
     createAndLinkStates();
 }
 

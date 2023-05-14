@@ -24,7 +24,7 @@
 */
 class DFA {
     private:
-        std::set<std::string> states;
+        std::string stateString;
         Alphabet alphabet;
         std::string transitionFunction;
         std::string initialState;
@@ -34,7 +34,7 @@ class DFA {
         std::set<State> states;
 
     public:
-        DFA(std::set<std::string> givenStates, Alphabet givenAlphabet, std::string givenTransitionFunction, std::string givenInitialState, std::set<std::string> givenFinalStates);
+        DFA(std::string givenStates, Alphabet givenAlphabet, std::string givenTransitionFunction, std::string givenInitialState, std::set<std::string> givenFinalStates);
         ~DFA();
 
         bool testWord(Word word);
