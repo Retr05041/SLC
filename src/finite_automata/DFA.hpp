@@ -24,17 +24,17 @@
 */
 class DFA {
     private:
-        std::string stateString;
-        Alphabet alphabet;
-        std::string transitionFunction;
-        std::string initialState;
-        std::set<std::string> finalStates;
+        std::string m_stateString;
+        Alphabet *m_oAlphabet;
+        std::string m_transitionFunction;
+        std::string m_initialState;
+        std::string m_finalStates;
 
         void createAndLinkStates();
-        std::set<State> states;
+        std::set<State> m_oStates;
 
     public:
-        DFA(std::string givenStates, Alphabet givenAlphabet, std::string givenTransitionFunction, std::string givenInitialState, std::set<std::string> givenFinalStates);
+        DFA(std::string states, Alphabet *alphabet, std::string transitionFunction, std::string initialState, std::string finalStates);
         ~DFA();
 
         bool testWord(Word word);
