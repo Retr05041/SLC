@@ -10,7 +10,7 @@ Upon running the program, the user will be able to initialise their own DFA (Det
 ## How do I use SLC?
 1. Make sure to have gcc (v11.3.0 or higher) installed on your machine.
 2. Clone the repository.
-3. Navigate to the build directory.
+3. Make and navigate to the build directory.
 4. Run the following command: `cmake ..`
 5. Run the following command: `make`
 6. Run the following command: `./SLC`
