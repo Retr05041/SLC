@@ -10,7 +10,7 @@
 #include <iostream>
 
 int main(int argc, char const *argv[]) {
-    std::string tempWord = "aba";
+    std::string tempWord = "001";
     Language *oLanguage = new Language();
 
     std::cout << "Alphabet: " << oLanguage->getAlphabet() << std::endl;
