@@ -11,16 +11,12 @@
 
 #include "Alphabet.hpp"
 #include "Word.hpp"
-#include "../rules/ruleset/Palindrome.hpp"
 
 class Language {
     private:
         Alphabet *m_oAlphabet;
         Word *m_language;
         int m_languageSize;
-
-        // Rules
-        Palindrome *m_oPalindrome;
 
     public:
         Language();
@@ -34,7 +30,6 @@ class Language {
 
         // Methods
         bool isValidWord(std::string word);
-        std::string getActiveRules();
 
 };
 

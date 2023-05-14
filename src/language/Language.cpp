@@ -15,8 +15,6 @@ Language::Language() {
     m_languageSize = 10;
     m_language = new Word[m_languageSize];
 
-    // Rules
-    m_oPalindrome = new Palindrome();
 }
 
 /**
@@ -37,7 +35,6 @@ Language::Language(std::string alphabet, int languageSize) {
 Language::~Language() {
     delete m_oAlphabet;
     delete[] m_language;
-    delete m_oPalindrome;
 }
 
 /**
@@ -66,21 +63,7 @@ bool Language::isValidWord(std::string word) {
         }
     }
 
-    // Check if the word breaks any active rules
-    if (!m_oPalindrome->validateWord(oWord)) {
-        delete oWord;
-        return false;
-    }
-
     delete oWord;
     return true;
-}
-
-/**
- * @brief Getter for the active rules.
- * @return The active rules.
-*/
-std::string Language::getActiveRules() {
-    return m_oPalindrome->getRuleName();
 }
 

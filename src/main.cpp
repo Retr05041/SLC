@@ -10,12 +10,10 @@
 #include <iostream>
 
 int main(int argc, char const *argv[]) {
-    std::string tempWord = "0110110110";
-    std::string ruleChoice = "1";
+    std::string tempWord = "aba";
     Language *oLanguage = new Language();
 
     std::cout << "Alphabet: " << oLanguage->getAlphabet() << std::endl;
-    std::cout << "Rules: " << oLanguage->getActiveRules() << std::endl;
     std::cout << "Validating \"" << tempWord << "\": ";
     if (oLanguage->isValidWord(tempWord)) {
         std::cout << "true" << std::endl;
