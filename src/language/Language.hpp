@@ -11,6 +11,7 @@
 
 #include "Alphabet.hpp"
 #include "Word.hpp"
+#include "../finite_automata/DFA.hpp"
 
 class Language {
     private:
@@ -18,10 +19,12 @@ class Language {
         Word *m_language;
         int m_languageSize;
 
+        // DFA
+        DFA *m_oDFA;
+
     public:
         Language();
-        Language(std::string ruleChoice);
-        Language(std::string alphabet, int languageSize);
+        Language(std::string states, std::string alphabet, int languageSize, std::string givenTransitionFunction, std::string givenInitialState, std::string givenFinalStates);
         ~Language();
 
         // Getters

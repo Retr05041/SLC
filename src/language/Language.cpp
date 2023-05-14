@@ -15,6 +15,9 @@ Language::Language() {
     m_languageSize = 10;
     m_language = new Word[m_languageSize];
 
+    // Create the DFA
+    m_oDFA = new DFA("AB", m_oAlphabet, "(((A, 0), A), ((A, 1), B))", "A", "B");
+
 }
 
 /**
@@ -22,10 +25,13 @@ Language::Language() {
  * @param alphabet The alphabet to be stored.
  * @return A Language object.
 */
-Language::Language(std::string alphabet, int languageSize) {
+Language::Language(std::string states, std::string alphabet, int languageSize, std::string transitionFunction, std::string initialState, std::string finalStates) {
     m_oAlphabet = new Alphabet(alphabet);
     m_languageSize = languageSize;
     m_language = new Word[m_languageSize];
+
+    // Create the DFA
+    m_oDFA = new DFA(states, m_oAlphabet, transitionFunction, initialState, finalStates);
 }
 
 /**
@@ -35,6 +41,7 @@ Language::Language(std::string alphabet, int languageSize) {
 Language::~Language() {
     delete m_oAlphabet;
     delete[] m_language;
+    delete m_oDFA;
 }
 
 /**
