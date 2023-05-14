@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.22.1)
 # Project name
 # Current version
 # Languages used
-project(SimpleParser VERSION 1.0 LANGUAGES CXX)
+project(SLC VERSION 1.0 LANGUAGES CXX)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -15,11 +15,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Set source files
 set(SOURCE_FILES
     src/main.cpp
-    src/language/Word.cpp
-    src/language/Alphabet.cpp
     src/language/Language.cpp
-    src/rules/abstract/AbstractRule.cpp
-    src/rules/ruleset/Palindrome.cpp
+    src/finite_automata/DFA.cpp
+    src/language/Alphabet.cpp
+    src/states/State.cpp
+    src/language/Word.cpp
 )
 
 # Add executable
